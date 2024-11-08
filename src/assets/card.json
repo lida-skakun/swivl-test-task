@@ -1,0 +1,44 @@
+{
+  "cardData": [
+    {
+      "id": 1,
+      "author": "Gregory Watkins",
+      "share": true,
+      "title": "New air routes that promise cheap flights in",
+      "likes": 0,
+      "watched": 0,
+      "sharedTo": false,
+      "sharedVia": false
+    },
+    {
+      "id": 2,
+      "author": "Gregory Watkins",
+      "share": true,
+      "title": "New air routes that promise cheap flights in",
+      "likes": 0,
+      "watched": 0,
+      "sharedTo": false,
+      "sharedVia": false
+    },
+    {
+      "id": 3,
+      "author": "Gregory Watkins",
+      "share": false,
+      "title": "New air routes that promise cheap flights in",
+      "likes": 24,
+      "watched": 88,
+      "sharedTo": "discussionaboutanimgttdds...",
+      "sharedVia": false
+    },
+    {
+      "id": 4,
+      "author": "Gregory Watkins",
+      "share": false,
+      "title": "New air routes that promise cheap flights in",
+      "likes": 24,
+      "watched": 88,
+      "sharedTo": false,
+      "sharedVia": "Shared via weblink"
+    }
+  ]
+}
