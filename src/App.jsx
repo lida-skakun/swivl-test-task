@@ -1,28 +1,36 @@
-import { createGlobalStyle } from "styled-components";
-import Header from "./components/Header/Header";
-import MainDesk from "./components/MainDesk/MainDesk";
+import React, { useState } from "react";
+import { ThemeProvider } from "styled-components";
+import * as Styles from "./App.styles";
+import Header from "./components/Header";
+import MainDesk from "./components/FeedDesk";
 import UserDetails from "./components/UserDetails";
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    max-width: 1440px;
-    color: #3e4056;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Open Sans", Roboto,
-      Oxygen, Ubuntu, Cantarell, "Segoe UI", "Helvetica Neue", sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-`;
+const theme = {
+  colors: {
+    text: "#3e4056",
+    textBright: "#3e3f58",
+    gradient: "linear-gradient(to right bottom, #ff974f, #e32c75);",
+    lightBackground: "#F7F9FC",
+    red: "#f05d63",
+  },
+  desktop: "1200px",
+  laptop: "1025px",
+  tablet: "768px",
+  mobile: "576px",
+};
 
 function App() {
   return (
-    <>
-      <GlobalStyle />
-      <Header />
-      <UserDetails />
-      <MainDesk />
-    </>
+    <ThemeProvider theme={theme}>
+      <>
+        <Styles.GlobalStyle />
+        <Header />
+        <Styles.Main>
+          <UserDetails />
+          <MainDesk />
+        </Styles.Main>
+      </>
+    </ThemeProvider>
   );
 }
 
