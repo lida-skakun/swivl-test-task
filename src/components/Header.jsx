@@ -8,7 +8,7 @@ import bellIcon from "../img/bell-icon.svg";
 import presentIcon from "../img/present-icon.svg";
 import mediumIcon from "../img/medium-icon.svg";
 
-export default function Header() {
+export default function Header({ isActive, selectLink }) {
   return (
     <Styles.HeaderContainer>
       <Styles.Width>
@@ -28,9 +28,27 @@ export default function Header() {
           </Styles.HeaderProfile>
         </Flex>
         <Styles.Navigation>
-          <Styles.StyledNavLink href="http://">FEED</Styles.StyledNavLink>
-          <Styles.StyledNavLink href="http://">EXPLORE</Styles.StyledNavLink>
-          <Styles.StyledNavLink href="http://">DISCUSSION</Styles.StyledNavLink>
+          <Styles.StyledNavLink
+            href="/"
+            isActive={isActive === "feed"}
+            onClick={() => selectLink("feed")}
+          >
+            FEED
+          </Styles.StyledNavLink>
+          <Styles.StyledNavLink
+            href="/"
+            isActive={isActive === "explore"}
+            onClick={() => selectLink("explore")}
+          >
+            EXPLORE
+          </Styles.StyledNavLink>
+          <Styles.StyledNavLink
+            href="/"
+            isActive={isActive === "discussion"}
+            onClick={() => selectLink("discussion")}
+          >
+            DISCUSSION
+          </Styles.StyledNavLink>
           <CirclePlusButton>+</CirclePlusButton>
         </Styles.Navigation>
       </Styles.Width>

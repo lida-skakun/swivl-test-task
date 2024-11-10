@@ -1,11 +1,10 @@
 import * as Styles from "./styles/FeedDesk.styled";
 import CardData from "../assets/card.json";
 import Card from "./Card";
-import React, { useState } from "react";
 
 const cards = CardData.cardData.map((card) => (
   <Card
-    id={card.id}
+    key={card.id}
     title={card.title}
     author={card.author}
     sharedTo={card.sharedTo}
@@ -16,13 +15,7 @@ const cards = CardData.cardData.map((card) => (
   />
 ));
 
-export default function FeedDesk() {
-  const [isPrivate, setIsPrivate] = useState(false);
-
-  const switchMode = () => {
-    setIsPrivate((prev) => !prev);
-  };
-
+export default function FeedDesk({ isPrivate, switchMode }) {
   return (
     <Styles.FeedDesk>
       <Styles.PublicPrivateMode>

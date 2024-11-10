@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import * as Styles from "./styles/UserDetails.styled";
 import { OptionsMenu } from "./styles/OptionsMenu.styled";
 import { MenuItem } from "./styles/MenuItem.styled";
@@ -8,16 +7,7 @@ import threeDots from "../img/three-dots.svg";
 import deleteIcon from "../img/delete-icon.svg";
 import reportIcon from "../img/report-icon.svg";
 
-export default function UserDetails() {
-  const [displayMenu, setDisplayMenu] = useState(false);
-
-  const showMenu = () => {
-    setDisplayMenu(!displayMenu);
-    setTimeout(() => {
-      setDisplayMenu(false);
-    }, 5000);
-  };
-
+export default function UserDetails({ showMenu, displayMenu }) {
   return (
     <Styles.UserDetails>
       <Styles.TopDetails>

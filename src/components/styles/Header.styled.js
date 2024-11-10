@@ -59,15 +59,12 @@ export const StyledNavLink = styled.a`
   margin-right: 30px;
   padding-bottom: 20px;
   border-bottom: 3px solid transparent;
-  border-image: ${({ theme }) => theme.colors.gradient};
+  border-image: ${({ theme, isActive }) =>
+    isActive ? theme.colors.gradient : "#ffffff"};
   border-image-slice: 1;
-
-  &.active {
-    color: blue;
-    font-weight: bold;
-  }
+  opacity: ${({ isActive }) => (isActive ? "1" : "0.6")};
 
   &:hover {
-    color: gray;
+    opacity: 1;
   }
 `;
