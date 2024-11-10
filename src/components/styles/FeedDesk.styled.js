@@ -42,7 +42,7 @@ export const SwitchButton = styled.div.withConfig({
 export const CardSections = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: minmax(0, 1fr);
+  grid-auto-rows: minmax(2, 1fr);
   gap: 20px;
   margin-top: 50px;
 

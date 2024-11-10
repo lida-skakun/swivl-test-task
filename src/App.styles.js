@@ -13,16 +13,19 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const Main = styled.main`
-  max-width: 1440px;
+  max-width: 1170px;
   margin: 0 auto;
-  padding: 40px 110px;
+  padding: 40px 136px;
   display: grid;
   gap: 60px;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, 1fr);
+
+  @media (max-width: 1440px) {
+    padding: 40px 80px;
+  }
 
   @media (max-width: ${({ theme }) => theme.desktop}) {
     gap: 30px;
-    padding: 40px 80px;
   }
 
   @media (max-width: ${({ theme }) => theme.tablet}) {

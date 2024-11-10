@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const CirclePlusButton = styled.button`
   position: absolute;
   top: 70%;
-  left: 84.5%;
+  left: 95%;
   width: 64px;
   height: 64px;
   border: none;

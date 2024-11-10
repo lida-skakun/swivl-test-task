@@ -8,7 +8,7 @@ export const CardContainer = styled.div`
 `;
 
 export const Article = styled.div`
-  font-size: 34px;
+  font-size: 36px;
   font-family: "Montserrat", sans-serif;
   margin: 10px 0 30px 0;
 

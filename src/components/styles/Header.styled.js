@@ -3,9 +3,6 @@ import styled, { css } from "styled-components";
 export const HeaderContainer = styled.header`
   box-shadow: 0px 12px 12px 0px rgba(0, 0, 0, 0.06);
   padding: 0 100px;
-  position: relative;
-  max-width: 100%;
-  height: 100%;
   background-color: #ffffff;
 `;
 
@@ -16,8 +13,9 @@ export const flexCentered = css`
 `;
 
 export const Width = styled.div`
-  max-width: 1440px;
+  max-width: 1170px;
   margin: 0 auto;
+  position: relative;
 `;
 
 export const Logo = styled.img`
